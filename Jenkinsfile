@@ -9,7 +9,7 @@ pipeline {
     environment {
         duser = credentials(vjyguvi).username
         dpass = credentials(dckr_pat_zUSMCYxBddrKWv1C92ARjVudXOg).password
-        EC2_INSTANCE_IP = 3.110.197.41
+        EC2_INSTANCE_IP = '3.110.197.41'
         EC2_PEM_KEY = credentials(ec2pem)
 
     }
