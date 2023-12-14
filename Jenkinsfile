@@ -1,7 +1,7 @@
-Jenkinsfile to deploy app in aws ec2
+# Jenkinsfile to deploy app in aws ec2
 
 
-Jenkinsfile
+# Jenkinsfile
 
 pipeline {
     agent any
