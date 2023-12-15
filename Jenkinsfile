@@ -19,7 +19,7 @@ pipeline {
             steps {
                 script {
                     // Build Docker image
-                    sh "docker build -t ${duser}/your-web-app:${env.BUILD_NUMBER} ."
+                    sh 'docker build -t ${duser}/your-web-app:${env.BUILD_NUMBER} .'
                 }
             }
         }
