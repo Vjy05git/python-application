@@ -9,14 +9,7 @@ pipeline {
 
     }
 
-    stages {
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/Vjy05git/python-application.git'
-            }
-        }
-
-        stage('Build Docker Image') {
+          stage('Build Docker Image') {
             steps {
                 script {
                     // Build Docker image
