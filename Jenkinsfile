@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         duser = 'vjyguvi'
-        dpass = 'dckr_pat_zUSMCYxBddrKWv1C92ARjVudXOg'
+        dpass = 'dckr_pat_J6Xhg2yWdAADNS253Rn2wZez1-Y'
         EC2_INSTANCE_IP = '15.207.254.70'
         EC2_PEM_KEY = 'ec2pem'
     }
