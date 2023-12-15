@@ -2,12 +2,20 @@ pipeline {
     agent any
 
     environment {
-        duser = "credentials('vjyguvi').username"
-        dpass = "credentials('dckr_pat_zUSMCYxBddrKWv1C92ARjVudXOg').password"
-        EC2_INSTANCE_IP = '13.201.80.54'
-        EC2_PEM_KEY = "credentials('ec2pem')"
+       duser = credentials('vjyguvi').username
+       dpass = credentials('dckr_pat_zUSMCYxBddrKWv1C92ARjVudXOg').password
+       EC2_INSTANCE_IP = '13.201.80.54'
+       EC2_PEM_KEY = credentials('ec2pem')
 
     }
+
+     stages {
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/Vjy05git/python-application.git'
+            }
+        }
+
 
           stage('Build Docker Image') {
             steps {
@@ -22,7 +30,7 @@ pipeline {
             steps {
                 script {
                     // Push Docker image to Docker Hub
-                    sh "docker login -u ${duser} -p ${dpass}"
+                    sh "docker login -u ${duser} -p ${dpass} docker.io"
                     sh "docker push ${duser}/your-web-app:${env.BUILD_NUMBER}"
                     sh "docker logout"
                 }
@@ -41,3 +49,4 @@ pipeline {
             }
         }
     }
+}
