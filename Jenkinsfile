@@ -2,10 +2,10 @@ pipeline {
     agent any
 
     environment {
-        duser = '''credentials('vjyguvi').username'''
-        dpass = '''credentials('dckr_pat_zUSMCYxBddrKWv1C92ARjVudXOg').password'''
+        duser = 'vjyguvi'
+        dpass = 'dckr_pat_zUSMCYxBddrKWv1C92ARjVudXOg'
         EC2_INSTANCE_IP = '15.207.254.70'
-        EC2_PEM_KEY = '''credentials('ec2pem')'''
+        EC2_PEM_KEY = 'ec2pem'
     }
 
     stages {
