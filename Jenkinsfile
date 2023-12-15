@@ -29,7 +29,7 @@ pipeline {
                 script {
                     // Push Docker image to Docker Hub
                     sh "docker login -u ${duser} -p ${dpass}"
-                    sh "docker push ${duser}/your-web-app:${env.BUILD_NUMBER}"
+                    sh "docker push ${duser}/your-web-app"
                     sh "docker logout"
                 }
             }
