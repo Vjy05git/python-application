@@ -4,7 +4,7 @@ pipeline {
     environment {
         duser = '''credentials('vjyguvi').username'''
         dpass = '''credentials('dckr_pat_zUSMCYxBddrKWv1C92ARjVudXOg').password'''
-        EC2_INSTANCE_IP = '13.201.80.54'
+        EC2_INSTANCE_IP = '15.207.254.70'
         EC2_PEM_KEY = '''credentials('ec2pem')'''
     }
 
