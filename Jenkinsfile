@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                checkout 'https://github.com/Vjy05git/python-application.git'
+                checkoutscm 'https://github.com/Vjy05git/python-application.git'
             }
         }
 
