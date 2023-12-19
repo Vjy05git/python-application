@@ -1,7 +1,7 @@
 pipeline {
-    agent { lable 'ec2' }
-    stages {
-        stage('Build') {
+    agent { label 'ec2' }
+    
+    stage('Build') {
             steps {
                 git 'https://github.com/Vjy05git/python-application.git'
 
@@ -17,6 +17,5 @@ pipeline {
                  }
         }
 
-         }
-    }
+          }
 
