@@ -8,7 +8,7 @@ pipeline {
                  }
         }
 
-        stage('Build') {
+        stage('Build2') {
             steps {
                 sh 'docker build -t vjypy .'
 
