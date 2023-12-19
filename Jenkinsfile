@@ -1,6 +1,6 @@
 pipeline {
     agent { label 'ec2' }
-    
+   stages { 
     stage('Build') {
             steps {
                 git 'https://github.com/Vjy05git/python-application.git'
@@ -19,3 +19,4 @@ pipeline {
 
           }
 
+}
