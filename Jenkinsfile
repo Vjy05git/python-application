@@ -3,6 +3,8 @@ pipeline {
    stages { 
     stage('Build') {
             steps {
+               
+                sh 'sudo apt install git -y'
                 git 'https://github.com/Vjy05git/python-application.git'
 
                  }
