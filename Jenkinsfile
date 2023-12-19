@@ -14,7 +14,7 @@ pipeline {
             steps {
                 sh 'docker build -t vjypy .'
 
-                sh 'docker run -d -it --name vjypy -p8000:8000 vjypy'
+                sh 'docker run -d -it --name vjypy -p8000:3000 vjypy'
 
                  }
         }
