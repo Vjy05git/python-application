@@ -1,14 +1,7 @@
 pipeline {
     agent { label 'ec2' }
    stages { 
-    stage('Build') {
-            steps {
-               
-                sh 'sudo apt install git -y'
-                sh 'git clone https://github.com/Vjy05git/python-application.git'
-
-                 }
-        }
+    
 
         stage('Build2') {
             steps {
